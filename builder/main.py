@@ -133,7 +133,7 @@ env.Replace(
         "$UPLOAD_FLAGS"
     ],
 
-    UPLOADCMD='$UPLOADER $UPLOADERFLAGS -cf $SOURCE',
+    UPLOADCMD='echo "executing espDownload command on STM32" & echo espDownload > $UPLOAD_PORT & $UPLOADER $UPLOADERFLAGS -cf $SOURCE',
     UPLOADOTACMD='"$PYTHONEXE" "$UPLOADEROTA" $UPLOADEROTAFLAGS -f $SOURCE',
 
     #
